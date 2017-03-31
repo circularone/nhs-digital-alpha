@@ -1,4 +1,4 @@
-# NHS Digital Alpha Protoypes
+# NHS Digital Alpha Protoype
 
 Prototype as part of a service design proposal for NHS England by [Nile](https://nilehq.com).
 
