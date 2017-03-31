@@ -19,7 +19,7 @@ this server is:
 npm start
 ```
 
-Now browse to the app at [localhost:3000](http://localhost:3000).
+Now browse to the app at [localhost:8000](http://localhost:8000).
 
 ### Editing the Application
 
