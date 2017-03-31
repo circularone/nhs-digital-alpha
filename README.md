@@ -8,7 +8,7 @@ This is purely for demonstration of ideas only and not to be used in production.
 
 Requires npm package manager. The best way to install npm is to install node using the node.js installer. npm is installed as part of node.
 
-Get the node installer and help at nodejs.org[`https://nodejs.org`].
+Get the node installer and help at [nodejs.org](https://nodejs.org).
 
 ### Run the Application
 
@@ -19,7 +19,7 @@ this server is:
 npm start
 ```
 
-Now browse to the app at [`localhost:3000`][local-app-url].
+Now browse to the app at [localhost:3000](http://localhost:3000).
 
 ### Editing the Application
 
@@ -31,4 +31,4 @@ gulp watch
 
 Every time you save a file in the source directory gulp will rebuild the relevant files and reload the browser.
 
-The application is built using AngularJs[`https://angularjs.org/`] and follows the Angular Style Guide[`https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md`]
+The application is built using [AngularJs](https://angularjs.org/) and follows the [Angular Style Guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)
