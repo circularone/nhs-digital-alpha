@@ -4,7 +4,7 @@
   "description": "Prototype apps for NHS digital services",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "gulp build"
   },
   "author": "Spider Online",
   "license": "ISC",
@@ -39,6 +39,7 @@
     "gulp-watch": "^4.3.11",
     "gulp-webserver": "^0.9.1",
     "jshint": "^2.9.4",
+    "run-sequence": "^1.2.2",
     "vinyl-ftp": "^0.6.0"
   }
 }

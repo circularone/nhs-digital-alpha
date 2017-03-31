@@ -18,7 +18,8 @@ var gulp 		= require('gulp'),
 	ignore 		= require('gulp-ignore'),
 	htmlify 	= require('gulp-angular-htmlify'),
 	watch 		= require('gulp-watch'),
-	webserver 	= require('gulp-webserver');
+	webserver 	= require('gulp-webserver'),
+	sequence 	= require('run-sequence');
 
 // Paths
 
@@ -140,4 +141,18 @@ gulp.task('webserver', ['watch'], function() {
 		open: true,
 		fallback: 'index.html'
 	}));
+});
+
+// Build app and run in browser
+
+gulp.task('build', function() {
+	sequence(
+        [
+        	'js', 
+        	'ng', 
+        	'html', 
+        	'index'
+        ],
+        'webserver'
+    );
 });
