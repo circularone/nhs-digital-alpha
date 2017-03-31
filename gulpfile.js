@@ -108,7 +108,7 @@ gulp.task('ng', function() {
 	return gulp.src(paths.ng)
 		.pipe(sourcemaps.init())
 		.pipe(concat('app.min.js'))
-		// .pipe(uglify())
+		.pipe(uglify())
 		.pipe(sourcemaps.write(''))
 		.pipe(gulp.dest('dist/assets/js'));
 });
