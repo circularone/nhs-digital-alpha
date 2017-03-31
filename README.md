@@ -1,6 +1,6 @@
 # NHS Digital Alpha Protoypes
 
-Prototype as part of service design proposal for NHS England.
+Prototype as part of a service design proposal for NHS England by [Nile](https://nilehq.com).
 
 This is purely for demonstration of ideas only and not to be used in production.
 
