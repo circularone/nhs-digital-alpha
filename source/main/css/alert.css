@@ -1,0 +1,130 @@
+.main-alert {
+	background: #fff;
+}
+
+.main-alert .site-header {
+	border: none;
+}
+
+.main-alert .site-title {
+	margin: 20px 40px;
+}
+
+.main-alert .user-toggle {
+	background: none;
+	line-height: 80px;
+	padding-right: 40px;
+	height: 80px;
+}
+
+.alert-actions {
+	position: relative;
+	width: 100%;
+	padding-top: 40px;
+}
+
+.alert-actions button {
+	width: 100%;
+	display: block;
+	margin: 0 0 10px 0;
+	border: 2px solid #005eb8;
+	background: none;
+	color: #005eb8;
+	text-align: left;
+	padding: 0 16px;
+	position: relative;
+}
+
+.alert-actions button:hover {
+	background: #005eb8;
+	color: #fff;
+}
+
+.alert-actions button svg {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	margin-top: -10px;
+	transition: all .3s;
+}
+
+.alert-actions button svg use {
+	fill: #005eb8;
+}
+
+.alert-actions button:hover svg use {
+	fill: #fff;
+}
+
+.alert-content {
+	position: fixed;
+	bottom: 40px;
+	left: 40px;
+	width: calc(100% - 360px);
+	max-width: 768px;
+}
+
+.alert-content :last-child {
+	margin-bottom: 0;
+}
+
+.alert-content h1 {
+	font-weight: 300;
+	font-size: 48px;
+	line-height: 61px;
+	margin-bottom: 34px;
+	color: #005eb8;
+}
+
+
+
+
+.standard-header {
+	background: #005eb8;
+	padding: 40px 0 40px 0;
+}
+
+.standard-header p {
+	color: #fff;
+	margin: 0;
+	padding: 0 0 0 56px;
+}
+
+.standard-header h1 {
+	color: #fff;
+	font-weight: 300;
+	font-size: 36px;
+	line-height: 44px;
+	margin: 0;
+}
+
+.alert-title {
+	padding-left: 56px;
+}
+
+.alert-title svg use {
+	fill: #fff;
+}
+
+.alert-title svg {
+	width: 48px;
+	height: 48px;
+	float: left;
+	margin-right: 20px;
+	position: absolute;
+	left: 0;
+	top: -4px;
+}
+
+p.alert-intro {
+	font-size: 24px;
+	color: #444;
+	line-height: 38px;
+	margin-bottom: 16px;
+}
+
+.alert-detail {
+	background: #f7f7f7;
+}

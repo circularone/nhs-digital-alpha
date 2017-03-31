@@ -1,0 +1,122 @@
+.main-proposal {
+	background: #f7f7f7;
+}
+
+.main-proposal .detail-header {
+	background-image: url('/assets/img/page-header/proposal-header.jpg');
+}
+
+span.proposal-tag {
+	color :#fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+}
+
+.proposal-menu {
+	position: relative;
+	border-top: 1px solid rgba(255,255,255,0.5);
+	bottom: -100px
+}
+
+.proposal-menu ul {
+	border-left: 1px solid rgba(255,255,255,0.5);
+}
+
+.proposal-menu li {
+	float: left;
+	position: relative;
+	border-right: 1px solid rgba(255,255,255,0.5);
+}
+
+.proposal-menu svg {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 25px;
+	top: 50%;
+	margin-top: -10px;
+}
+
+.proposal-menu svg use {
+	fill: #fff;
+}
+
+.proposal-menu a {
+	display: block;
+	position: relative;
+	padding: 12px 36px 12px 54px;
+	color: #fff;
+}
+
+.mission-statement {
+	background: #fff;
+	padding: 60px;
+	text-align: center;
+	font-size: 24px;
+	line-height: 40px;
+}
+
+.mission-statement p {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.top-spacer {
+	padding-top: 48px;
+}
+
+.icon-list {
+	margin-top: -12px;
+}
+
+.icon-list li {
+	position: relative;
+	padding: 12px 60px 12px 30px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.icon-list li:last-child {
+	border-bottom: none;
+}
+
+.icon-list svg {
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: 17px;
+	left: 0;
+}
+
+.icon-list svg use {
+	fill: #444;
+}
+
+.icon-list span {
+	display: inline-block;
+	background: #005eb8;
+	color :#fff;
+	font-size: 12px;
+	border-radius: 5px;
+	padding: 0 5px;
+	line-height: 24px;
+	position: absolute;
+	right: 0;
+	top: 13px;
+}
+
+.mission-statement img {
+	width: 100%;
+	max-width: 280px;
+	display: inline-block;
+	margin: 0 20px;
+}
+
+.stats {
+	background: #fff;
+}
+
+.stats canvas {
+	max-width: 180px;
+	margin: 0 auto;
+}

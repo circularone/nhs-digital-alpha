@@ -1,0 +1,298 @@
+.main-scenario {
+	/*background: #f7f7f7;*/
+	background: #fff;
+	padding-top: 80px;
+}
+
+.main-scenario .site-header {
+	border: none;
+}
+
+.main-scenario .site-title {
+	margin: 20px 40px;
+}
+
+.main-scenario .user-toggle {
+	background: none;
+	line-height: 80px;
+	padding-right: 40px;
+	height: 80px;
+}
+
+.detail-header {
+	background: #f7f7f7 url('/assets/img/page-header/road.jpg') no-repeat center center / cover;
+    padding: 180px 0 100px;
+	position: relative;
+}
+
+.detail-header:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(27,27,27,0.3);
+}
+
+.detail-header h2 {
+	color: #fff;
+	margin: 0;
+	font-weight: 300;
+	font-size: 44px;
+	line-height: 54px;
+}
+
+.nhs-col-icon {
+	width: 100%;
+	display: block;
+}
+
+.nhs-col-icon svg {
+	height: 54px;
+	width: 54px;
+}
+
+.nhs-col-icon use {
+	fill: #aaa;
+}
+
+.nhs-col-icon {
+	margin: 0 0 24px 0
+}
+
+.nhs-col-icon > div {
+	width: 50px;
+	height: 50px;
+	position: relative;
+}
+
+.nhs-col-icon svg {
+	width: 44px;
+	height: 44px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+.chart-container {
+	margin-top: 40px;
+}
+
+
+.check-switch {
+	position: absolute;
+	margin-left: -9999px;
+	visibility: hidden;
+}
+
+.check-switch + label {
+	display: block;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	padding: 2px;
+	width: 40px;
+	height: 20px;
+	background-color: #d7dcdf;
+	border-radius: 30px;
+	transition: background 0.4s;
+}
+
+.check-switch + label:before, 
+.check-switch + label:after {
+	display: block;
+	position: absolute;
+	content: "";
+}
+
+.check-switch + label:before {
+	top: 2px;
+	left: 2px;
+	bottom: 2px;
+	right: 2px;
+	background-color: #fff;
+	border-radius: 20px;
+	transition: background 0.4s;
+}
+
+.check-switch + label:after {
+	top: 4px;
+	left: 4px;
+	bottom: 4px;
+	width: 12px;
+	background-color: #d7dcdf;
+	border-radius: 12px;
+	transition: margin 0.4s, background 0.4s;
+}
+
+.check-switch:checked + label {
+	background-color: #005eb8;
+}
+
+.check-switch:checked + label:after {
+	margin-left: 20px;
+	background-color: #005eb8;
+}
+
+.check-switch-list li {
+    padding: 12px 80px 12px 20px;
+    background: #f7f7f7;
+    transition: all .3s;
+    font-family: Halis;
+    text-transform: uppercase;
+    font-size: 11px;
+    width: calc((100% - 60px) / 4 );
+    float: left;
+    position: relative;
+    margin-right: 20px;
+}
+
+.check-switch-list li:nth-child(4) {
+	margin-right: 0;
+}
+
+.check-switch-list li:last-child {
+	border: none;
+}
+
+.check-switch-list li:hover {
+	color: #005eb8;
+}
+
+.check-switch-list .check-switch + label {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	margin-top: -12px;
+}
+
+.chart-header {
+	background: #f0f0f0;
+    padding: 50px 0 60px 0;
+}
+
+.chart-holder:before {
+    content: "";
+    display: block;
+    width: calc(80% - 32px);
+    height: calc(100% - 102px);
+    background: rgba(27,27,27,.1);
+    position: absolute;
+    left: 24px;
+    top: 7px;
+}
+
+.chart-indicator {
+    border-left: 2px solid #a0a0a0;
+    border-right: 2px solid #a0a0a0;
+    width: calc(100% - 42px);
+    margin-left: 29px;
+    position: relative;
+    margin-top: 10px
+}
+
+.chart-indicator:before {
+    content: "";
+    display: block;
+    border-top: 2px solid #a0a0a0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+}
+
+.chart-indicator > div {
+    width: 20%;
+    float: left;
+    position :relative;
+    text-align: center;
+}
+
+.chart-indicator > div:first-child {
+  border-right: 2px solid #a0a0a0; 
+  width: 80%; 
+}
+
+.chart-indicator > div span {
+    background: #fff;
+    padding: 0 8px;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #444;
+    font-weight: 700;
+}
+
+.projection-ccgs {
+    position: relative;
+}
+
+.projection-ccgs a {
+    display: block;
+    background: #005eb8;
+    color: #fff;
+    margin: 0 0 20px 0;
+    height: 0;
+    padding-bottom: 35%;
+    position: relative;
+}
+
+.projection-ccgs li:last-child a {
+	margin: 0;
+}
+
+.projection-ccgs a span:first-child {
+    display: block;
+    position :absolute;
+    top: 14px;
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+.projection-ccgs a span:last-of-type {
+    display: block;
+    position: absolute;
+    bottom: 14px;
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: #fff;
+}
+
+.projection-ccgs a svg {
+	width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 18px;
+    right: 14px;
+}
+
+.projection-ccgs a svg use {
+	fill: #fff;
+}
+
+.chart-header .widget-title {
+    margin: 0 0 10px 0;
+}
+
+@media only screen and (max-width: 768px) {
+
+	.check-switch-list li {
+	    width: 100%;
+	    margin: 0 0 4px 0;
+	}
+
+	.chart-indicator>div span {
+	    font-size: 6px;
+	}
+
+}

@@ -1,0 +1,28 @@
+.notice {
+	position: fixed;
+	left: 50%;
+	bottom: 0;
+	width: 320px;
+	margin-left: -160px;
+	background: #fff;
+	text-align: center;
+	font-weight: 700;
+	padding: 12px 20px;
+	box-shadow: 0 0 5px rgba(27,27,27,0.4);
+	z-index: 10;
+}
+
+.notice.ng-enter,
+.notice.ng-leave {
+	transition: all .6s;
+}
+
+.notice.ng-enter,
+.notice.ng-leave.ng-leave-active {
+	bottom: -100%;	
+}
+
+.notice.ng-leave,
+.notice.ng-enter.ng-enter-active {
+	bottom: 0;
+}

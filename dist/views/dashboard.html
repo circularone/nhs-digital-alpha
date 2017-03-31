@@ -1,0 +1,134 @@
+<div class="nhs-row">
+
+	<div class="nhs-col-3">
+
+		<div class="dashboard-block">
+
+			<h4 class="widget-title">Alerts</h4>
+
+			<ul class="alert-list">
+
+				<li>
+					<svg class="icon nhs-icon-alert">
+						<use xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-alert"/>
+					</svg>
+					Predicted trend: Hip Replacements / Tramadol / Weather
+				</li>
+
+			</ul>
+
+		</div>
+
+		<div class="dashboard-block">
+
+			<h4 class="widget-title">Budget</h4>
+
+			<canvas id="line" class="chart chart-line" chart-data="dashboard.graph.data" chart-labels="dashboard.graph.labels" chart-series="dashboard.graph.series" chart-options="dashboard.graph.options" chart-dataset-override="dashboard.graph.datasetOverride" chart-click="dashboard.graph.onClick">
+			</canvas>
+
+			<button class="budget-btn">
+				Read More
+				<svg class="icon nhs-icon-arrow-right">
+					<use xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-arrow_forward"/>
+				</svg>
+			</button>
+
+		</div>
+
+<!-- 		<div class="dashboard-block">
+
+			<h4 class="widget-title">Clinical Audit</h4>
+
+			<p>Nullam non ante in eros placerat sollicitudin. Curabitur magna ipsum, hendrerit id nibh non, interdum feugiat.</p>
+
+		</div> -->
+
+		<div class="dashboard-block">
+
+			<h4 class="widget-title">Find Users</h4>
+
+			<div class="coll-search">
+				<svg class="icon nhs-icon-minus">
+					<use xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-search"/>
+				</svg>
+				<input type="text" data-ng-model="dashboard.search">
+			</div>
+
+			<ul class="user-list" data-ng-if="dashboard.search.length > 2">
+				<li data-ng-repeat="item in main.contacts | filter: dashboard.search">
+					<a>
+						<div class="user-profile">
+							<svg class="icon nhs-icon-minus">
+								<use xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-person"/>
+							</svg>
+						</div>
+						{{ item.first_name }} {{ item.last_name }}
+						<span data-ng-bind="item.email"></span>
+					</a>
+				</li>
+			</ul>
+
+		</div>
+
+	</div>
+
+	<div class="nhs-col-2-3">
+
+		<div class="dashboard-block">
+
+			<h4 class="widget-title">My Notices</h4>
+
+			<ul class="notice-list">
+				<li>
+					<h4>Physiotherapy</h4>
+					<span>2</span>
+				</li>
+				<li>
+					<h4>Heart disease</h4>
+					<span>6</span>
+				</li>
+				<li>
+					<h4>Flu vaccinations</h4>
+					<span>3</span>
+				</li>
+			</ul>
+
+		</div>
+
+		<div class="dashboard-block">
+
+			<h4 class="widget-title">Email</h4>
+
+			<ul class="email-list">
+				<li>
+					<h4>Meeting request for 24th April</h4>
+					<p>oaisud@nhs.co.uk</p>
+					<span>View</span>
+				</li>
+				<li>
+					<h4>Can we talk about results</h4>
+					<p>rbgv@nhs.co.uk</p>
+					<span>View</span>
+				</li>
+				<li>
+					<h4>Travel details for 12th September</h4>
+					<p>susaidy@nhs.co.uk</p>
+					<span>View</span>
+				</li>
+				<li>
+					<h4>Do my figures tally with yours</h4>
+					<p>asudygvda@nhs.co.uk</p>
+					<span>View</span>
+				</li>
+				<li>
+					<h4>Did you receive the annual report</h4>
+					<p>asdbvad@nhs.co.uk</p>
+					<span>View</span>
+				</li>
+			</ul>
+
+		</div>
+
+	</div>
+
+</div>

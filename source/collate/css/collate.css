@@ -1,0 +1,123 @@
+.slides {
+	padding-top: 96px!important;
+}
+
+.toolbar {
+    position: fixed;
+    z-index: 9;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 0;
+    width: 100%;
+    background: #f0f0f0;
+}
+
+.toolbar img {
+    height: 36px;
+    margin-left: 32px;
+}
+
+@media only screen and (max-width: 960px) {
+
+    .toolbar img {
+        margin-left: 0;
+    }
+
+}
+
+.slide {
+    background: #fff;
+    box-shadow: 0 0 20px rgba(27,27,27,0.1);
+    margin: 0 0 80px 0;
+    position: relative;
+}
+
+.slide > h4 {
+    position: absolute;
+    top: -40px;
+    color: #b9b9b9;
+}
+
+.slide .inner {
+	padding: 10px;
+}
+
+@media only screen and (min-width: 1200px) {
+
+	.slide {
+	    height: 0;
+    	padding-bottom: 56.25%;
+    }
+
+	.slide .inner {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		padding: 40px;
+		transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+	}
+
+}
+
+@media only screen and (min-width: 960px) {
+
+	.main-collate .chat-toggle {
+		display: none;
+	}
+
+}
+
+.approve {
+    width: 320px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: #f0f0f0;
+    z-index: 10;
+    box-shadow: 0 0 5px rgba(27,27,27,0.5);
+    padding: 10px 20px 20px 20px;
+}
+
+.approve h4 {
+    margin: 0 0 10px 0
+}
+
+.approve h4 span {
+    font-size: 11px;
+    color: #999;
+}
+
+.approve button {
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    font-family: Halis;
+    font-size: 11px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #083d6f;
+}
+
+
+@media only screen and (max-width: 960px) {
+    .approve {
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 10px
+    }
+
+    .approve h4 {
+        line-height: 14px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .approve button {
+        line-height: 44px;
+        height: 44px;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+}

@@ -1,0 +1,103 @@
+.main-project {
+	background: #fff;
+}
+
+.main-project .chart-header {
+	background: #fff;
+}
+
+.best-worst {
+	position: relative;
+    margin-top: 20px;
+    border-radius: 2px;
+}
+
+.best-worst button {
+    width: calc(50% - 2px);
+    border-radius: 0;
+    background: none;
+    color: #555;
+    margin: 0;
+    float: left;
+    position: relative;
+    font-family: Halis;
+    text-transform: uppercase;
+    font-size: 11px;
+    background: #f0f0f0;
+    border-bottom: 2px solid #005eb8;
+}
+
+.best-worst button:first-child {
+	margin-right: 4px;
+}
+
+.contact-details {
+    position: relative;
+    font-weight: 700;
+    padding-left: 50px;
+    background: #f7f7f7;
+    padding: 12px 20px 20px 110px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.contact-details img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    border: 2px solid #005eb8;
+}
+
+.contact-details h4 {
+    margin: 0;
+}
+
+.contact-details p {
+    font-size: 14px;
+    color: #999;
+    margin: -5px 0 10px 0
+}
+
+.contact-icon {
+    width: 25%;
+    display: block;
+    float: left;
+    position: relative;
+    background: #e5e5e5;
+    border-right: 2px solid #f7f7f7;
+    line-height: 44px;
+    text-align: center;
+    border-radius: 3px;
+    height: 44px;
+}
+
+.contact-details svg {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -12px 0 0 -12px;
+}
+
+.contact-details svg use {
+    fill: #005eb8;
+}
+
+.contact-details span {
+    display: block;
+    font-size: 14px;
+}
+
+blockquote {
+    font-size: 14px;
+    padding: 0 0 0 20px;
+    border-left: 3px solid;
+    font-weight: 400;
+    display: block;
+    margin: 0 0 20px 0;
+}

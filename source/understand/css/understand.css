@@ -1,0 +1,323 @@
+.main-understand {
+	background: #fff;
+}
+
+.main-understand .chart-header {
+	background: #fff;
+}
+
+.alert-heading {
+	font-size: 24px;
+	line-height: 32px;
+	z-index: 1;
+	margin-bottom: 24px!important;
+}
+
+.alert-heading span {
+	background: #f0f0f0;
+	padding-right: 10px;
+}
+
+.alert-heading:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 4px;
+	background: #005eb8;
+	position: absolute;
+	bottom: 8px;
+	z-index: -1;
+}
+
+.relevant-ccg {
+	display: block;
+	padding: 16px 20px;
+	border-bottom: 2px solid #005eb8;
+	font-weight: 700;
+	text-align: center;
+	position: relative;
+	margin: -4px 0 24px 0;
+	background: #f0f0f0;
+	color: #444;
+	font-size: 16px;
+	margin-top: 16px;
+	font-family: Halis;
+	text-transform: uppercase;
+	font-size: 11px;
+}
+
+
+.ask-question {
+	background: #E8EDEE;
+	padding: 40px 0;
+	box-shadow: inset 0 0 5px #aaa;
+}
+
+.ask-question input[type=text] {
+	border: none;
+	background: none;
+	border-bottom: 2px solid #425563;
+	max-width: 100%;
+	font-size: 32px;
+	padding: 0;
+	line-height: 38px;
+	width: 100%;
+	font-family: Halis;
+}
+
+.ask-question input[type=text]:focus {
+	outline: none;
+}
+
+.ask-question h2 {
+	font-weight: 300;
+	font-size: 32px;
+	line-height: 38px;
+	position: relative;
+	margin: 0;
+	color: #425563;
+}
+
+
+
+
+a.other-ccg-story {
+	display: block;
+	margin: 0 0 10px 0;
+	color: #fff;
+	background: #005EB8;
+	font-weight: 700;
+	padding: 12px 40px 12px 20px;
+	border-radius: 3px;
+	position: relative;
+}
+
+a.other-ccg-story svg {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: 10px;
+	top: 50%;
+	margin-top: -10px;
+
+}
+
+a.other-ccg-story svg use {
+	fill: #fff;
+}
+
+
+
+
+
+
+
+
+
+.dataset-link {
+	display: block;
+	position: relative;
+	padding: 0px 0px 0 24px;
+	border-radius: 3px;
+	font-weight: 700;
+	margin: 0 0 10px 0;
+	color: #555;
+}
+
+.dataset-link svg {
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	left: 0;
+	top: 8px;
+}
+
+.dataset-link svg use {
+	fill: #005EB8;
+}
+
+
+
+
+
+
+
+
+
+.case-study {
+	z-index: 100000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.case-study.ng-enter,
+.case-study.ng-leave,
+.case-study.ng-enter .overlay,
+.case-study.ng-leave .overlay,
+.case-study.ng-enter .inner,
+.case-study.ng-leave .inner {
+	transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.case-study.ng-enter .overlay,
+.case-study.ng-leave.ng-leave-active .overlay {
+	opacity: 0;
+}
+
+.case-study.ng-leave .overlay,
+.case-study.ng-enter.ng-enter-active .overlay {
+	opacity: 1;
+}
+
+.case-study.ng-enter .inner,
+.case-study.ng-leave.ng-leave-active .inner {
+	top: 200%;
+}
+
+.case-study.ng-leave .inner,
+.case-study.ng-enter.ng-enter-active .inner {
+	top: 50%;
+}
+
+.case-study .inner {
+	position: absolute;
+	width: calc(100% - 10px);
+	max-width: 960px;
+	height: auto;
+	max-height: calc(100% - 10px);
+	background: #fff;
+	padding: 20px;
+	box-shadow: 0 0 10px #333;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	border-radius: 4px;
+	overflow-y: scroll;
+}
+
+.case-study h2 {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.case-study .close {
+	background: none;
+	padding: 0;
+	width: 54px;
+	height: 54px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 1;
+}
+
+.case-study .close svg {
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -16px 0 0 -16px;
+
+}
+
+
+.main-understand .chart-holder:before {
+	display: none;
+}
+
+
+.at-risk-dropdown {
+	text-align: left;
+	width: 100%;
+	position: relative;
+}
+
+.at-risk-dropdown svg {
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	margin-top: -11px;
+}
+
+.at-risk-dropdown svg use {
+	fill: #fff;
+}
+
+.progress-list {
+	position: relative;
+}
+
+.progress-list li {
+	position: relative;
+	margin-bottom: 12px;
+}
+
+.progress-list .list-title {
+	font-family: Halis;
+	text-transform: uppercase;
+	font-size: 11px;
+}
+
+.progress-list .list-count {
+	font-family: Halis;
+	text-transform: uppercase;
+	font-size: 11px;
+	float: right;
+    background: #f0f0f0;
+    border-radius: 5px;
+    padding: 0 10px;
+    line-height: 24px;
+}
+
+.progress-list .list-progress {
+	display: block;
+	height: 12px;
+	background: #f0f0f0;
+}
+
+.progress-list .list-progress span {
+	background: #005eb8;
+	display: block;
+	height: 12px;
+	transition: all .8s;
+}
+
+.progress-list .list-progress span.alert {
+	background: #f7464a;
+}
+
+
+@keyframes heartbeat {
+	0% {
+		transform: scale( 1 );
+	}
+	20% {
+		transform: scale( 1.1 );
+		color: #f7464a;
+	}
+	40% {
+		transform: scale( 1 );
+	}
+	60% {
+		transform: scale( 1.1 );
+		color: #f7464a;
+	}
+	80% {
+		transform: scale( 1 );
+	}
+	100% {
+		transform: scale( 1 );
+	}
+}
+
+.pulse {
+	animation: heartbeat 2s infinite;
+}

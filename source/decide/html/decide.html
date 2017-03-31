@@ -1,0 +1,149 @@
+<div class="wrap">
+
+	<h1>Search for invitees</h1>
+
+	<ul class="selected-users">
+		<li ng-repeat="item in main.contacts" ng-if="item.selected">
+			<a class="remove-user" ng-click="item.selected = false">
+				<svg class="icon nhs-icon-minus">
+					<use xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-close"/>
+				</svg>
+			</a>
+			<div class="email-profile">
+				<img ng-src="{{ item.image }}" alt="">
+			</div>
+			<h4 ng-bind="item.first_name + ' ' + item.last_name"></h4>
+			<p ng-bind="item.email"></p>
+
+		</li>
+	</ul>
+
+	<div class="decide-control" ng-style="{ 'min-height': decide.min_height }">
+
+		<div class="wrap">
+			<div class="instant-search">
+				<svg class="icon nhs-icon-minus">
+					<use xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-search"/>
+				</svg>
+				<input type="text" id="email-search" class="decide-text" ng-focus="decide.show_suggestions = true" ng-blur="decide.hide_suggestions()" ng-model="decide.model">
+				<label for="email-search">Invite:</label>
+				<div class="instant-results" ng-if="decide.model.length > 2 && decide.show_suggestions" ng-mouseover="decide.block_remove = true" ng-mouseleave="decide.block_remove = false">
+					<ul>
+						<li ng-repeat="item in main.contacts | filter: decide.model">
+							<a ng-click="decide.select_user($index);item.selected = true">
+								{{ item.first_name }} {{ item.last_name }}
+								<span ng-bind="item.email"></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<input type="checkbox" id="send-docs">
+			<label for="send-docs">Send documents</label>
+
+			<button class="schedule" ng-click="decide.calendar_open = true">
+				Suggest Time
+			</button>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="calendar" ng-if="decide.calendar_open">
+
+	<h4 class="widget-title">Available time slots</h4>
+
+	<div class="decide-legend">
+		<span class="available-dot"></span>
+		Everyone available
+	</div>
+
+	<a class="close-cal" ng-click="decide.calendar_open = false">
+		<svg class="icon nhs-icon-minus">
+			<use xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-close"/>
+		</svg>
+	</a>
+
+	<div class="cal-inner">
+
+		<div class="calender-row calendar-heading">
+			<div class="day">
+				<span>MON</span>
+			</div>
+			<div class="day">
+				<span>TUES</span>
+			</div>
+			<div class="day">
+				<span>WED</span>
+			</div>
+			<div class="day">
+				<span>THUR</span>
+			</div>
+			<div class="day">
+				<span>FRI</span>
+			</div>
+			<div class="day">
+				<span>SAT</span>
+			</div>
+			<div class="day">
+				<span>SUN</span>
+			</div>
+		</div>
+		<div class="calender-row">
+			<div class="day"></div>
+			<div class="day"></div>
+			<div class="day"></div>
+			<div class="day"></div>
+			<div class="day"></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">1</span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">2</span></div>
+		</div>
+		<div class="calender-row">
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">3</span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">4</span>
+			</div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">5</span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">6</span><span class="available-dot"></span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">7</span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">8</span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">9</span></div>
+		</div>
+		<div class="calender-row">
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">10</span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">11</span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">12</span><span class="available-dot"></span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">13</span><span class="available-dot"></span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">14</span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">15</span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">16</span></div>
+		</div>
+		<div class="calender-row">
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">17</span>
+			</div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">18</span><span class="available-dot"></span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">19</span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">20</span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">21</span>
+			</div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">22</span><span class="available-dot"></span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">23</span></div>
+		</div>
+		<div class="calender-row">
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">24</span><span class="available-dot"></span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">25</span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">26</span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">27</span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">28</span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">29</span></div>
+			<div class="day active" ng-click="decide.set_active_day($event)"><span class="day-no">30</span></div>
+		</div>
+
+	</div>
+
+	<button class="send-invite">
+		Send invitation 
+	</button>
+</div>

@@ -1,0 +1,321 @@
+<div class="chart-header">
+
+	<div class="wrap">
+
+		<div class="nhs-row">
+
+			<div class="nhs-col-3">
+
+				<h4 class="widget-title">Level 1 alert:<br> Headline Hip replacement changes forecast</h4>
+
+				<span class="relevant-ccg">
+					NHS North Leeds CCG
+				</span>
+
+				<p class="strapline">Based on current trends, Foresite is forecasting a higher than anticipated demand for hip replacement operations.</p>
+
+				<p><strong>Timescale: 12 – 18 months</strong></p>
+
+				<button class="at-risk-dropdown" ng-click="understand.toggle_capabilities()">
+					At risk areas
+					<svg class="icon nhs-icon-keyboard_arrow_down">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-keyboard_arrow_down"></use>
+					</svg>
+				</button>
+
+			</div>
+
+			<div class="nhs-col-2-3 chart-holder">
+
+				<canvas 
+					id="line" 
+					class="chart chart-line" 
+					chart-data="understand.chart.data" 
+					chart-labels="understand.chart.labels" 
+					chart-series="understand.chart.series" 
+					chart-options="understand.chart.options"
+					chart-dataset-override="understand.chart.datasetOverride" 
+					chart-click="understand.chart.onClick">
+				</canvas>
+
+			</div>
+
+		</div>
+
+		<div class="hospital-capability" ng-if="understand.show_at_risk_areas">
+
+			<ul class="progress-list">
+				<li ng-repeat="item in understand.hospital_capabilities">
+					<span class="list-title" ng-bind="item.title"></span>
+					<span class="list-count" ng-bind="item.display_count + '%'" ng-class="{ pulse: item.pulse }"></span>
+					<span class="list-progress">
+						<span ng-style="{ width: item.width }" ng-class="{ alert: item.alert }"></span>
+					</span>
+				</li>
+			</ul>
+		</div>
+		
+
+	</div>
+
+</div>
+
+<div class="ask-question">
+
+	<div class="wrap">
+
+		<div class="nhs-row">
+
+			<div class="nhs-col-4">
+
+				<h2>Ask a question:</h2>
+
+			</div>
+
+			<div class="nhs-col-3-4">
+
+				<form ng-submit="understand.search()">
+					<input type="text" class="large-text" ng-model="understand.query">
+					<button type="submit" style="position: absolute;left: -10000px">test</button>
+				</form>
+
+			</div>
+
+		</div>
+
+		<div class="query-results" ng-if="understand.show_results">
+
+			<div class="nhs-row">
+			
+				<div class="nhs-col-3">
+					
+					<h4 class="widget-title">More Hip operations than expected</h4>
+
+					<div ng-if="!understand.show_second_query_data">
+					
+						<p>Based on current and forecast trends, Foresite is predicting a possible 15 – 20% increase in the number of hip replacement procedures required in [insert name] CCGs within the next 12 – 18 months.</p>
+				
+						<p>This forecast is based on the following observed trends:</p>
+
+						<ul class="standard-list">
+							<li>25% increase in tramadol prescrptions for hip pain in past 5 years</li>
+							<li>1.4% increase in age profile of patients in affected CCGs</li>
+							<li>2.3% increase in relevant co-morbidities for patients in affected CCGs (osteoarthritis)</li>
+							<li>18% increase in physiotherapy referrals for hip pain</li>
+							<li>The long range weather forecast indicating a severe cold spell is likely this winter</li>
+						</ul>
+
+					</div>
+
+					<div ng-if="understand.show_second_query_data"> 
+
+						<p>These general trends are common and shared by the majority of CCGs.  However, demand in North Leeds is forecast to be in the top quartile.  Other CCGs in this quartile include [name and name].</p>
+
+						<p>You are meeting demand more effectively than your peers.</p>
+
+						<p>Currently, Leeds North has commissioned X hip replacement operations for 2023/24, which accounts for 87% of total budgeted spend in this area.  This is higher than average, and 12% higher than the recommended upper limit.  Procedures where demand is forecast to remain stable or decrease (and which therefore may represent some budget flexibility) include inguinal hernia repair, paediatric grommet insertion and myomectomies.</p>
+
+					</div>
+
+				</div>
+
+				<div class="nhs-col-2-3">
+
+					<canvas 
+						id="barchart" 
+						class="chart chart-bar" 
+						chart-series="understand.result_chart.series" 
+						chart-data="understand.result_chart.data" 
+						chart-labels="understand.result_chart.series" 
+						chart-options="understand.result_chart.options">
+					</canvas>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="wrap vert-padding">
+
+	<div class="nhs-row">
+
+		<div class="nhs-col-4">
+
+			<h3 class="widget-title">Other CCG Case Studies</h3>
+
+			<a class="other-ccg-story" ng-click="understand.open_case_study( 'NHS Barking And Dagenham CCG' )">
+				NHS Barking And Dagenham CCG
+				<svg class="icon nhs-icon-keyboard_arrow_right">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-keyboard_arrow_right"></use>
+				</svg>
+			</a>
+
+			<a class="other-ccg-story" ng-click="understand.open_case_study( 'NHS South Warwickshire CCG' )">
+				NHS South Warwickshire CCG
+				<svg class="icon nhs-icon-keyboard_arrow_right">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-keyboard_arrow_right"></use>
+				</svg>
+			</a>
+
+			<a class="other-ccg-story" ng-click="understand.open_case_study( 'NHS West Hampshire CCG' )">
+				NHS West Hampshire CCG
+				<svg class="icon nhs-icon-keyboard_arrow_right">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-keyboard_arrow_right"></use>
+				</svg>
+			</a>
+
+			<a class="other-ccg-story" ng-click="understand.open_case_study( 'NHS West Leicestershire CCG' )">
+				NHS West Leicestershire CCG
+				<svg class="icon nhs-icon-keyboard_arrow_right">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-keyboard_arrow_right"></use>
+				</svg>
+			</a>
+
+		</div>
+
+		<div class="nhs-col-4">
+
+			<h3 class="widget-title">Datasets</h3>
+
+			<a class="dataset-link" href="http://content.digital.nhs.uk/article/2021/Website-Search?productid=24154&q=hip+surgery+data&sort=Relevance&size=10&page=1&area=both#top" target="_blank">
+				Provisional Quarterly Patient Reported Outcome Measures (PROMs) in England
+				<svg class="icon nhs-icon-database">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-database"></use>
+				</svg>
+			</a>
+
+			<a class="dataset-link" href="https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=0ahUKEwivq8v_0ufSAhVDL8AKHXg7DG4QFggpMAI&url=http%3A%2F%2Fcontent.digital.nhs.uk%2Fcatalogue%2FPUB20664%2Fpres-disp-com-eng-2005-15-rep.pdf&usg=AFQjCNFprScktl5BngE9rpLJi-SpVeBMjA&sig2=Zas77ULnuqnJFA9b1JjVIg" target="_blank">
+				Prescriptions Dispensed in the Community, Statistics for England
+				<svg class="icon nhs-icon-database">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-database"></use>
+				</svg>
+			</a>
+
+			<a class="dataset-link" href="http://content.digital.nhs.uk/article/2021/Website-Search?productid=24154&q=hip+surgery+data&sort=Relevance&size=10&page=1&area=both#top" target="_blank">
+				Provisional Quarterly Patient Reported Outcome Measures (PROMs) in England
+				<svg class="icon nhs-icon-database">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-database"></use>
+				</svg>
+			</a>
+			
+
+		</div>
+
+		<div class="nhs-col-2">
+
+			<h3 class="widget-title">More Hip operations than expected</h3>
+
+			<div class="nhs-row">
+
+				<div class="nhs-col-2">
+
+					<p>This forecast is made on the following basis:</p>
+
+					<ul class="standard-list">
+						<li>Current trajectory of hip replacement operations</li>
+						<li>Current trajectory of tramadol prescriptions</li>
+						<li>Forecast patient demographics</li>
+						<li>Forecast patient co-morbidities</li>
+						<li>Long range weather forecast</li>
+					</ul>
+
+				</div>
+
+				<div class="nhs-col-2">
+			
+					<p>An increase in admissions for hip replacement operations is likely to cause the following:</p>
+					
+					<ul class="standard-list">
+						<li>Increased demand for physiotherapy services</li>
+						<li>Increased demand for social care beds</li>
+						<li>Increased demand for ambulatory aids</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="case-study" ng-if="understand.case_study_open">
+
+	<div class="overlay" ng-click="understand.case_study_open = false"></div>
+
+	<div class="inner">
+
+		<button class="close" ng-click="understand.case_study_open = false">
+			<svg class="icon nhs-icon-close">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-close"></use>
+			</svg>
+		</button>
+
+		<h2 ng-bind="understand.case_study_title"></h2>
+
+		<div class="nhs-row">
+
+			<div class="nhs-col-3">
+
+				<p>In Barking and Dagenham a total of 411 hip replacement procedures were carried out between April 16 and March 17 at a cost of over £2.4 million. This equates to a cost of over £5800 per operation. According to data provided by B&D CCG, in 2015/16 compared to the similar areas, B&D had a significantly higher procedure rate for hip replacement. Figure 1 demonstrates the directly standardised rates (DSR) for hip surgery per 100,000 of the population in Greater London area.  B&D’s DSR for hip surgery was 71.92 - significantly higher than the mean Great London DSR for hip surgery of 65.22.</p><p>Nationally the average length of hospital stay for hip replacement is 10.6 days; for the top 25% performing CCGs in England this ranges from 4.4 – 9 days. B&D’s figure between April 16 and March 17 was higher than the national average at 13.9 days and lies in the bottom 25% performing CCGs. The readmission rate for hip replacements in B&D during the same period was 10.1%, which again puts B&D in the bottom 25% of CCGs; the highest 25% CCG performers averaged between 2.0-4.5% (NHS Digital).</p><p>Barking & Dagenham identified that key areas where improvements in procedures can be achieved at minimal cost include; consistent communication with patients, patients admitted on day of surgery, minimising the number of cancelled procedures, mobilising patients within 12-18 hours after surgery and using an agreed criteria-based process for discharge.  In addition primary care pathways and protocols for OA were developed to ensure that all treatment options have been tried before referral to a surgeon is made, to reduce the number of inappropriate referrals and to ensure equity of treatment. Analysis of HES data in 2014 identified higher procedure rates in regions where there were a greater number of older people, despite the data being age-standardized. The researchers hypothesised that regions with a high proportion of older people deliberately increase provision of THR to meet the presumed high need, even if this need does not materialise.</p>
+
+				<button class="view-more">
+					More info
+				</button>
+
+			</div>
+
+			<div class="nhs-col-2-3">
+
+				<canvas 
+					id="line" 
+					class="chart chart-line" 
+					chart-data="understand.case_study.data" 
+					chart-labels="understand.case_study.labels" 
+					chart-series="understand.case_study.series" 
+					chart-options="understand.case_study.options"
+					chart-dataset-override="understand.case_study.datasetOverride" 
+					chart-click="understand.case_study.onClick">
+				</canvas>
+
+				<div class="contact-details">
+					<img ng-src="{{ main.contacts[understand.random_user].image }}" alt="">
+					<h4>{{ main.contacts[understand.random_user].first_name }} {{ main.contacts[understand.random_user].last_name }}</h4>
+					<p ng-bind="main.contacts[understand.random_user].role"></p>
+					<blockquote ng-bind=" main.contacts[understand.random_user].quote"></blockquote>
+					<span class="contact-icon">
+						<svg class="icon nhs-icon-phone">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-phone"></use>
+						</svg>
+					</span>
+					<span class="contact-icon">
+						<svg class="icon nhs-icon-mail_outline">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-mail_outline"></use>
+						</svg>
+					</span>
+					<span class="contact-icon">
+						<svg class="icon nhs-icon-commenting-o">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-commenting-o"></use>
+						</svg>
+					</span>
+					<span class="contact-icon">
+						<svg class="icon nhs-icon-skype">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-skype"></use>
+						</svg>
+					</span>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>

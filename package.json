@@ -1,0 +1,44 @@
+{
+  "name": "nhs",
+  "version": "0.0.1",
+  "description": "Prototype apps for NHS digital services",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Spider Online",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.2",
+    "angular-animate": "^1.6.2",
+    "angular-chart.js": "^1.1.1",
+    "angular-sanitize": "^1.6.2",
+    "angular-ui-router": "^0.4.2",
+    "chart.js": "^2.5.0",
+    "jquery": "^3.1.1",
+    "svgxuse": "^1.1.16"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-angular-htmlify": "^2.3.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-flatten": "^0.3.1",
+    "gulp-if": "^2.0.2",
+    "gulp-ignore": "^2.0.2",
+    "gulp-jshint": "^2.0.4",
+    "gulp-jslint": "^1.0.10",
+    "gulp-sass": "^3.1.0",
+    "gulp-sftp": "^0.1.5",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-strip-comments": "^2.4.3",
+    "gulp-uglify": "^2.0.1",
+    "gulp-useref": "^3.1.2",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "gulp-webserver": "^0.9.1",
+    "jshint": "^2.9.4",
+    "vinyl-ftp": "^0.6.0"
+  }
+}

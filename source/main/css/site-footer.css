@@ -1,0 +1,35 @@
+.site-footer {
+	background: #fff;
+	position: relative;
+	/*box-shadow: 0 0 10px #aaa;*/
+	border-top: 1px solid #e0e0e0;
+	text-align: center;
+	padding: 40px 0;
+}
+
+.site-footer > :last-child {
+	margin-bottom: 0;
+}
+
+.site-footer {
+    background: #005eb8;
+    color: #fff;
+}
+
+.site-footer a {
+    color: #fff;
+}
+
+.site-footer ul {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.site-footer li {
+    display: inline;
+    padding: 0 24px;
+}
+
+.site-footer p {
+    margin: 0;
+}

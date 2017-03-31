@@ -1,0 +1,134 @@
+<div class="chart-header">
+
+	<div class="wrap">
+
+		<div class="nhs-row">
+
+			<div class="nhs-col-2-3 chart-holder">
+
+				<h4 class="widget-title">Cases of Flu</h4>
+
+				<canvas id="line" class="chart chart-line" chart-data="scenario.chart.data" chart-labels="scenario.chart.labels" chart-options="scenario.chart.options" chart-dataset-override="scenario.chart.datasetOverride" chart-click="scenario.chart.onClick">
+				</canvas>
+
+				<div class="chart-indicator">
+					<div><span>Recorded</span></div>
+					<div><span>Projected</span></div>
+				</div>
+
+			</div>
+
+			<div class="nhs-col-3">
+
+				<h4 class="widget-title">Case studies</h4>
+
+				<ul class="projection-ccgs">
+					<li>
+						<a href="/detail">
+							<span class="ng-binding">NHS Newcastle Gateshead CCG</span>
+							<span class="ng-binding">Vaccination Campaign</span>
+							<svg class="icon nhs-icon-keyboard_arrow_right">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-keyboard_arrow_right"/>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="/detail">
+							<span class="ng-binding">NHS South Devon And Torbay CCG</span>
+							<span class="ng-binding">Awareness Campaign</span>
+							<svg class="icon nhs-icon-keyboard_arrow_right">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-keyboard_arrow_right"/>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="/detail">
+							<span class="ng-binding">NHS Wiltshire CCG</span>
+							<span class="ng-binding">Famiflu Distribution</span>
+							<svg class="icon nhs-icon-keyboard_arrow_right">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-keyboard_arrow_right"/>
+							</svg>
+						</a>
+					</li>
+				</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="wrap vert-padding">
+
+	<div class="nhs-row">
+
+		<div class="nhs-col-3">
+
+			<h3 class="widget-title">Flu in Darlington</h3>
+
+			<p>Nunc mattis pharetra turpis, sed finibus quam lobortis nec. Morbi nec urna a odio semper vehicula. Proin pulvinar tortor eu consequat sagittis. Cras vitae condimentum ante, ut bibendum ipsum.</p>
+
+			<p>Donec molestie elit augue, ac lobortis sem viverra eget. Ut quis libero ac libero tempor fringilla non a urna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+		</div>
+
+		<div class="nhs-col-3">
+
+			<h3 class="widget-title">Things considered</h3>
+
+			<ul class="check-switch-list">
+				<li>
+					Toggle parameter 1
+					<input class="check-switch" type="checkbox" id="check-1" data-ng-model="scenario.models[0]" data-ng-change="scenario.randomize()"> 
+					<label for="check-1"></label>
+				</li>
+				<li>
+					Toggle parameter 2
+					<input class="check-switch" type="checkbox" id="check-2" data-ng-model="scenario.models[1]" data-ng-change="scenario.randomize()">
+					<label for="check-2"></label>
+				</li>
+				<li>
+					Toggle parameter 3
+					<input class="check-switch" type="checkbox" id="check-3" data-ng-model="scenario.models[2]" data-ng-change="scenario.randomize()">
+					<label for="check-3"></label>
+				</li>
+				<li>
+					Toggle parameter 4
+					<input class="check-switch" type="checkbox" id="check-4" data-ng-model="scenario.models[3]" data-ng-change="scenario.randomize()"> 
+					<label for="check-4"></label>
+				</li>
+			</ul>
+
+		</div>
+
+		<div class="nhs-col-3">
+
+			<h3 class="widget-title">Adjustments</h3>
+
+			<div class="range-slider">
+				<input class="range-slider__range" type="range" min="0" max="500" data-ng-model="scenario.models[4]" data-ng-change="scenario.randomize()">
+				<span class="range-slider__value">0</span>
+			</div>
+
+			<div class="range-slider">
+				<input class="range-slider__range" type="range" min="0" max="500" step="50" data-ng-model="scenario.models[5]" data-ng-change="scenario.randomize()">
+				<span class="range-slider__value">0</span>
+			</div>
+
+			<div class="range-slider">
+				<input class="range-slider__range" type="range" min="0" max="500" data-ng-model="scenario.models[6]" data-ng-change="scenario.randomize()">
+				<span class="range-slider__value">0</span>
+			</div> 
+
+			<div class="range-slider">
+				<input class="range-slider__range" type="range" min="0" max="500" data-ng-model="scenario.models[7]" data-ng-change="scenario.randomize()">
+				<span class="range-slider__value">0</span>
+			</div> 
+
+		</div>
+
+	</div>
+
+</div>

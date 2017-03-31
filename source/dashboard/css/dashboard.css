@@ -1,0 +1,224 @@
+.main-dashboard .nhs-row {
+	padding: 40px;
+}
+
+.dashboard-block {
+	background: #fff;
+	padding: 0 20px 12px 20px;
+	margin-bottom: 40px!important;
+	box-shadow: 0 0 10px rgba(27,27,27,0.1)
+}
+
+.main-dashboard h1 {
+	padding: 40px;
+	margin: 0;
+}
+
+.main-dashboard .widget-title {
+	background: #005eb8;
+	width: calc(100% + 40px);
+	margin-left: -20px;
+	padding: 12px 20px;
+	color: #fff
+}
+
+.email-list {
+	position: relative;
+	width: calc(100% + 40px);
+	position: relative;
+	margin-left: -20px;
+	margin-top: -20px;
+	margin-bottom: -20px;
+}
+
+.email-list li {
+	border-bottom: 1px solid #f0f0f0;
+	padding: 12px 20px;
+	position: relative;
+	padding-right: 100px;
+}
+
+
+.email-list li:nth-child(even) {
+	background: #f7f7f7;
+}
+
+.email-list h4,
+.email-list p {
+	margin: 0;
+} 
+
+.email-list span {
+	display: inline-block;
+	background: #f0f0f0;
+	border-radius: 3px;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	padding: 6px 12px;
+	font-weight: 700;
+	margin-top: -20px;
+}
+
+
+.user-list {
+	position: relative;
+	width: calc(100% + 40px);
+	margin-left: -20px;
+	max-height: 400px;
+	overflow-y: scroll;
+}
+
+.user-list li {
+	border-bottom: 1px solid #f0f0f0;
+	padding: 10px 20px 10px 70px;
+	position: relative;
+	font-weight: 700;
+}
+
+.user-list li span {
+	display: block;
+	font-weight: 400;
+	color: #555;
+}
+
+.user-list li:nth-child(even) {
+	background: #f7f7f7;
+}
+
+.user-list li svg {
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	width: 38px;
+	height: 38px;
+	padding: 10px;
+	background: #e0e0e0;
+	border-radius: 50%;
+	margin-top: -19px;
+}
+
+.user-list li svg use {
+	fill: #fff;
+}
+
+.coll-search {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.coll-search input[type=text] {
+	border: none;
+	border-bottom: 2px solid #444;
+	padding-left: 32px;
+	max-width: 100%;
+}
+
+.coll-search svg {
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: 15px;
+	margin-bottom: -20px;
+}
+
+.dashboard-block .nhs-icon-alert {
+	width: 32px;
+	height: 32px;
+	background: #d22727;
+	border-radius: 50%;
+	padding: 8px;
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	margin-top: -18px
+}
+
+.dashboard-block .nhs-icon-alert use {
+	fill: #fff;
+}
+
+.alert-list {
+	margin-top: -20px;
+	margin-bottom: -12px;
+	width: calc(100% + 40px);
+	margin-left: -20px;
+}
+
+.alert-list li {
+	border-bottom: 1px solid #f0f0f0;
+	padding: 10px 20px 10px 70px;
+	position: relative;
+	font-weight: 700;	
+}
+
+ul.notice-list {
+	width: calc(100% + 40px);
+	margin: -20px 0 -12px -20px;
+	position: relative;
+}
+
+ul.notice-list li {
+	border-bottom: 1px solid #f0f0f0;
+	padding: 10px 20px 10px 20px;
+	position: relative;
+	font-weight: 700;	
+}
+
+ul.notice-list li span {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background: #0eaf3f;
+	color: #fff;
+	text-align: center;
+	border-radius: 50%;
+	line-height: 24px;
+	font-size: 11px;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	margin-top: -12px;
+}
+
+ul.notice-list li h4 {
+	margin-bottom: 0;
+}
+
+ul.notice-list li:nth-child(even) {
+	background: #f7f7f7;
+}
+
+button.budget-btn {
+	background: none;
+	border-top: 2px solid #005eb8;
+	margin-top: 10px;
+	color: #005eb8;
+	text-align: left;
+	padding-left: 0;
+	display: block;
+	width: 100%;
+	position: relative;
+	margin-bottom: -8px;
+}
+
+button.budget-btn svg {
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -9px;
+}
+
+button.budget-btn svg use {
+	fill: #005eb8;
+}
+
+@media only screen and (max-width: 960px) {
+
+	.main-dashboard .nhs-row {
+	    padding: 10px;
+	}
+
+}

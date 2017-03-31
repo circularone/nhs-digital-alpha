@@ -1,0 +1,663 @@
+.main-decide {
+	background: #f7f7f7;
+}
+
+.main-decide .site-footer {
+	display: none!important;
+}
+
+.main-decide h1 {
+	margin: 40px 0 0 0;
+	text-align: center;
+}
+
+.decide-control {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(27,27,27,0.2);
+	z-index: 8;
+}
+
+.instant-search {
+	position: relative;
+	padding: 40px 0;
+}
+
+.instant-search label {
+	display: block;
+	float: left;
+	width: 140px;
+	font-family: Halis;
+	font-size: 32px;
+	line-height: 38px;
+}
+
+.instant-search input[type=text] {
+	border: none;
+	background: none;
+	border-bottom: 2px solid #425563;
+	max-width: 100%;
+	font-size: 32px;
+	padding: 0;
+	line-height: 38px;
+	width: calc(100% - 140px);
+	font-family: Halis; 
+	padding-left: 32px;
+}
+
+.instant-search input[type=text]:focus {
+	outline: none;
+}
+
+.instant-search > svg {
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: 45px;
+}
+
+.instant-search > svg use {
+	fill: #656565;
+}
+
+.instant-results {
+	position: absolute;
+	max-height: 300px;
+	background: #fff;
+	width: 100%;
+	top: -10px;
+	transform: translateY(-100%);
+	box-shadow: 0 0 5px rgba(27,27,27,0.5);
+	padding: 12px 20px;
+	z-index: -1;
+	overflow-y: scroll;
+}
+
+.instant-results.ng-enter,
+.instant-results.ng-leave {
+	transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+
+.instant-results.ng-enter,
+.instant-results.ng-leave.ng-leave-active {
+	transform: translateY(200%);
+	-ms-transform: translateY(200%);
+	-webkit-transform: translateY(200%);
+}
+
+.instant-results.ng-leave,
+.instant-results.ng-enter.ng-enter-active {
+	transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	-webkit-transform: translateY(-100%);
+}
+
+
+@media only screen and (min-width: 768px) {
+
+	.instant-results ul {
+		position: relative;
+		display: flex;
+		flex-wrap: flex;
+		flex-flow: row wrap;
+	}
+
+}
+
+.instant-results li {
+	display: block;
+	width: calc(33.333333333% - 13.333333333333333px);
+	border-bottom: 1px solid #e5e5e5;
+	margin: 0 20px 0 0;
+}
+
+.instant-results li:nth-child(3n) {
+	margin-right: 0;
+}
+
+.instant-results li a {
+	font-weight: 700;
+	padding: 8px 0;
+	display: block;
+	color: #555;
+	cursor: pointer;
+	transition: all .2s;
+}
+
+.instant-results li a:hover {
+	background: #005eb8;
+	color: #fff;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.instant-results li span {
+	display: block;
+	font-weight: 400;
+}
+
+ul.selected-users {
+	position: relative;
+}
+
+@media only screen and (min-width: 786px) {
+
+	ul.selected-users {
+		display: flex;
+		flex-wrap: flex;
+		flex-flow: row wrap;
+		padding: 60px 0 200px 0;
+	}
+}
+
+ul.selected-users li {
+	width: calc((100% - 60px) / 4);
+	margin: 0 20px 20px 0;
+}
+
+ul.selected-users li:nth-child(4n) {
+	margin-right: 0;
+}
+
+.remove-user {
+	display: block;
+	position: absolute;
+	right: 60px;
+	top: 0;
+	opacity: 0;
+}
+
+ul.selected-users li:hover .remove-user {
+	opacity: 1;
+}
+
+.remove-user svg {
+	width: 24px;
+	height: 24px;
+}
+
+ul.selected-users li {
+	position: relative;
+}
+
+.email-profile {
+	background: #005eb8;
+	width: 90px;
+	height: 90px;
+	margin: 0 auto;
+	position: relative;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.email-profile img {
+	width: 100%;
+	height: 100%;
+}
+
+.email-profile svg {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	left: 50%;
+	bottom: -12px;
+	margin: 0 0 0 -30px;
+}
+
+.email-profile svg use {
+	fill: #f0f0f0;
+}
+
+.selected-users h4,
+.selected-users p {
+	text-align: center;
+}
+
+.selected-users h4 {
+	text-transform: uppercase;
+	margin: 10px 0 0 0;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.selected-users p {
+	margin: 0;
+	font-weight: 700;
+	font-size: 12px;
+	color: #999;
+}
+
+.calendar {
+	position: fixed;
+	top: 78px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9;
+	background: #fff;
+}
+
+.calendar.ng-enter,
+.calendar.ng-leave {
+	transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.calendar.ng-enter,
+.calendar.ng-leave.ng-leave-active {
+	top: 100%;
+	opacity: 0;
+}
+
+.calendar.ng-leave,
+.calendar.ng-enter.ng-enter-active {
+	top: 78px;
+	opacity: 1;
+}
+
+.cal-inner {
+	position: absolute;
+	top: 60px;
+	height: calc(100% - 120px);
+	width: 100%;
+	left: 0;
+}
+
+.calender-row {
+	position: relative;
+	display: flex;
+	flex-wrap: flex;
+	height: 17.6%;
+	width: 100%;
+}
+
+.day {
+	width: 14.285714285714286%;
+	border-right: 1px solid #f0f0f0;
+	border-bottom: 1px solid #f0f0f0;
+	position: relative;
+	display: flex;
+}
+
+.calendar-heading {
+	font-family: Halis;
+	text-align: center;
+	height: 12%;
+	background: #005eb8;
+}
+
+.calendar-heading span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: #E8EDEE;
+	transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+}
+
+.calendar-heading .day {
+	border-right: 1px solid #768692;
+}
+
+.day:not(.active) {
+	background: rgba(27,27,27,0.05)
+}
+
+.day-no {
+	position: relative;
+}
+
+.day-no {
+	font-family: Halis;
+	position: absolute;
+	top: 5px;
+	left: 10px;
+}
+
+
+.calendar ul {
+	position: relative;
+	padding: 20px 20px 20px 40px;
+}
+
+
+.calendar li {
+	position: relative;
+	line-height: 22px;
+	font-weight: 700;
+}
+
+button.schedule {
+	display: block;
+	width: calc(100% - 260px);
+	margin-bottom: 40px;
+	font-family: Halis;
+	text-transform: uppercase;
+	float: right;
+}
+
+.calendar h4.widget-title {
+	padding: 16px 20px;
+	margin: 0;
+}
+
+a.close-cal {
+	position: absolute;
+	right: 20px;
+	top: 17px;
+}
+
+a.close-cal svg {
+	width: 24px;
+	height: 24px;
+}
+
+.send-invite {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	padding: 0;
+	font-family: Halis;
+	text-transform: uppercase;
+	border-radius: 0;
+}
+
+.day.active.chosen {
+	background: #005eb8;
+	color: #fff;
+}
+
+
+.decide-control input[type=checkbox] {
+	position: absolute;
+	left: -10000px;
+}
+
+.decide-control input[type=checkbox] + label {
+	display: block;
+	background: #e5e5e5;
+	width: 240px;
+	font-family: Halis;
+	text-transform: uppercase;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 20px;
+	border-radius: 2px;
+	position: relative;
+	float: left;
+}
+
+.decide-control input[type=checkbox] + label:before {
+	content: "";
+	display: block;
+	width: 16px;
+	height: 16px;
+	border: 2px solid #555;
+	border-radius: 2px;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	margin-top: -8px;
+}
+
+.decide-control input[type=checkbox]:checked + label:after {
+	content: "";
+	display: block;
+	width: 10px;
+	height: 10px;
+	background: #005eb8;
+	border-radius: 2px;
+	position: absolute;
+	right: 23px;
+	top: 50%;
+	margin-top: -5px;
+}
+
+.available-dot {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: #005eb8;
+}
+
+.decide-legend {
+	position: absolute;
+	right: 80px;
+	top: 0;
+	line-height: 60px;
+	font-family: Havil;
+	text-transform: uppercase;
+	font-size: 11px;
+	font-family: Halis;
+}
+
+.day .available-dot {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -9px 0 0 -9px;
+}
+
+
+.decide-legend span.available-dot {
+	position: relative;
+	top: 4px;
+	margin-right: 12px;
+}
+
+.chosen span.available-dot {
+	background: #fff;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+	.instant-search {
+		padding: 10px 0;
+	}
+
+	.instant-search label {
+		display: block;
+		float: left;
+		width: 80px;
+		font-family: Halis;
+		font-size: 20px;
+		line-height: 32px;
+	}
+
+	.instant-search input[type=text] {
+		border: none;
+		background: none;
+		border-bottom: 2px solid #425563;
+		max-width: 100%;
+		font-size: 24px;
+		padding: 0;
+		line-height: 32px;
+		width: calc(100% - 90px);
+		font-family: Halis;
+		padding-left: 32px;
+	}
+
+	.instant-search>svg {
+		width: 18px;
+		height: 18px;
+		position: absolute;
+		top: 16px;
+	}
+
+	.decide-control input[type=checkbox]+label {
+		display: block;
+		background: #e5e5e5;
+		width: 100%;
+		font-family: Halis;
+		text-transform: uppercase;
+		height: 44px;
+		line-height: 44px;
+		padding: 0 20px;
+		border-radius: 2px;
+		position: relative;
+		float: left;
+		font-size: 12px;
+	}
+
+	button.schedule {
+		display: block;
+		width: 100%;
+		margin-bottom: 10px;
+		font-family: Halis;
+		text-transform: uppercase;
+		float: right;
+		line-height: 44px;
+		height: 44px;
+		padding-top: 0;
+		padding-bottom: 0;
+		font-size: 12px;
+		margin-top: 10px;
+	}
+
+	.main-decide h1 {
+		margin: 10px 0 0;
+		text-align: center;
+	}
+
+
+	ul.selected-users li {
+		width: 100%;
+		margin: 0;
+		border-bottom: 1px solid #e0e0e0;
+	}
+
+	.instant-results li {
+		width: 100%;
+		margin: 0;
+	}
+
+	.remove-user {
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		opacity: 0;
+		margin-top: -12px;
+	}
+
+	ul.selected-users li:hover .remove-user {
+		opacity: 1;
+	}
+
+	ul.selected-users li {
+	    width: 100%;
+	    margin: 0;
+	    border-bottom: 1px solid #e0e0e0;
+	    padding-left: 60px;
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	}
+
+	.remove-user svg {
+		width: 24px;
+		height: 24px;
+	}
+
+	.email-profile {
+	    background: #005eb8;
+	    width: 50px;
+	    height: 50px;
+	    margin: 0 10px 0 0;
+	    border-radius: 50%;
+	    overflow: hidden;
+	    float: left;
+	    position: absolute;
+	    left: 0;
+	    top: 50%;
+	    margin-top: -25px;
+	}
+
+	.email-profile img {
+		width: 100%;
+		height: 100%;
+	}
+
+	.email-profile svg use {
+		fill: #f0f0f0;
+	}
+
+	.selected-users h4,
+	.selected-users p {
+		text-align: left;
+	}
+
+	.selected-users h4 {
+	    text-transform: uppercase;
+	    margin: 0;
+	    font-size: 14px;
+	    line-height: 24px;
+	    margin: 4px 0 0 0;
+	}
+
+	.instant-results { 
+		padding: 8px 10px;
+
+	}
+
+	.calendar {
+	    position: fixed;
+	    top: 60px;
+	}
+
+	.available-dot {
+	    display: inline-block;
+	    width: 12px;
+	    height: 12px;
+	    border-radius: 50%;
+	    background: #005eb8;
+	}
+
+	.day .available-dot {
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    margin: 4px 0 0 -4px;
+	}
+
+	.cal-inner {
+	    position: absolute;
+	    top: 100px;
+	    height: calc(100% - 160px);
+	    width: 100%;
+	    left: 0;
+	}
+
+	.decide-legend {
+	    position: absolute;
+	    left: 10px;
+	    top: 31px;
+	    line-height: 60px;
+	    font-family: Havil;
+	    text-transform: uppercase;
+	    font-size: 11px;
+	    font-family: Halis;
+	}
+
+	.decide-legend span.available-dot {
+	    position: relative;
+	    top: 2px;
+	    margin-right: 12px;
+	}
+
+	a.close-cal {
+	    position: absolute;
+	    right: 8px;
+	    top: 35px;
+	    z-index: 1;
+	}
+
+}

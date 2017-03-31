@@ -1,0 +1,305 @@
+<div class="chart-header">
+
+	<div class="wrap">
+
+		<div class="nhs-row">
+
+			<div class="nhs-col-3">
+
+
+				<h4 class="widget-title">Find out more</h4>
+
+				<p>To see how different factors affect the projected demand for hip replacement surgery, use the sliders below:</p>
+				
+				<div class="range-slider">
+					<span class="slider-label">Fragility</span>
+					<input class="range-slider__range" type="range" min="0" max="100" step="1" ng-model="project.slider_models[0]" ng-change="project.randomize()" ng-disabled="!project.enable_fragility">
+					<span class="range-slider__value" ng-bind="project.slider_models[0] + '%'"></span>
+				</div>
+
+				<div class="range-slider">
+					<span class="slider-label">Physio</span>
+					<input class="range-slider__range" type="range" min="0" max="100" step="1" ng-model="project.slider_models[1]" ng-change="project.randomize()" ng-disabled="!project.enable_physio">
+					<span class="range-slider__value" ng-bind="project.slider_models[1] + '%'">0</span>
+				</div>
+
+				<div class="range-slider">
+					<span class="slider-label">Lifestyle</span>
+					<input class="range-slider__range" type="range" min="0" max="100" step="1" ng-model="project.slider_models[2]"  ng-change="project.randomize()" ng-disabled="!project.enable_lifestyle">
+					<span class="range-slider__value" ng-bind="project.slider_models[2] + '%'">0</span>
+				</div> 
+
+				<div class="range-slider">
+					<span class="slider-label">Obesity</span>
+					<input class="range-slider__range" type="range" ng-model="project.slider_models[3]" step="1" min="0" max="100" ng-change="project.randomize()" ng-disabled="!project.enable_obesity">
+					<span class="range-slider__value" ng-bind="project.slider_models[3] + '%'">0</span>
+				</div> 
+
+			</div>
+
+			<div class="nhs-col-2-3 chart-holder">
+
+				<canvas 
+					id="line" 
+					class="chart chart-line" 
+					chart-data="project.chart.data" 
+					chart-labels="project.chart.labels" 
+					chart-series="project.chart.series" 
+					chart-options="project.chart.options"
+					chart-dataset-override="project.chart.datasetOverride" 
+					chart-click="project.chart.onClick">
+				</canvas>
+
+				<div class="chart-indicator">
+					<div><span>Recorded</span></div>
+					<div><span>Projected</span></div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<ul class="check-switch-list">
+			<li>
+				Fragility
+				<input class="check-switch" type="checkbox" id="check-1" ng-model="project.enable_fragility" ng-change="project.randomize()"> 
+				<label for="check-1"></label>
+			</li>
+			<li>
+				Physio
+				<input class="check-switch" type="checkbox" id="check-2" ng-model="project.enable_physio" ng-change="project.randomize()">
+				<label for="check-2"></label>
+			</li>
+			<li>
+				Lifestyle
+				<input class="check-switch" type="checkbox" id="check-3" ng-model="project.enable_lifestyle" ng-change="project.randomize()"> 
+				<label for="check-3"></label>
+			</li>
+			<li>
+				Obesity
+				<input class="check-switch" type="checkbox" id="check-4" ng-model="project.enable_obesity" ng-change="project.randomize()"> 
+				<label for="check-4"></label>
+			</li>
+		</ul>
+
+	</div>
+
+</div>
+
+<div class="ask-question">
+
+	<div class="wrap">
+
+		<div class="nhs-row">
+
+			<div class="nhs-col-4">
+
+				<h4 class="widget-title">Find out more</h4>
+
+				<p>Nullam non ante in eros placerat sollicitudin. Curabitur magna ipsum, hendrerit id nibh non, interdum feugiat. Nullam non ante in eros placerat sollicitudin.</p>
+
+				<p>Curabitur magna ipsum, hendrerit id nibh non, interdum feugiat. Nullam non ante in eros placerat sollicitudin. Curabitur magna ipsum, hendrerit id nibh non, interdum feugiat.</p>
+
+			</div>
+
+			<div class="nhs-col-3-4">
+
+				<canvas 
+					id="barchart" 
+					class="chart chart-bar" 
+					chart-series="project.uptake.series" 
+					chart-data="project.uptake.data" 
+					chart-labels="project.uptake.labels" 
+					chart-options="project.uptake.options">
+				</canvas>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="wrap vert-padding">
+
+	<div class="nhs-row">
+
+		<div class="nhs-col-3">
+
+			<h3 class="widget-title">Key factor: Age</h3>
+
+			<p>While most hip replacements are performed in patients between 60 and 80 years of age, older or younger age is not a contraindication to surgery.</p>
+
+			<h3 class="widget-title">Methodology</h3>
+
+			<p>Nullam non ante in eros placerat sollicitudin. Curabitur magna ipsum, hendrerit id nibh non, interdum feugiat. Interdum feugiat. Nullam non ante in eros placerat.</p>
+
+		</div>
+
+		<div class="nhs-col-3">
+
+			<h3 class="widget-title">Datasets</h3>
+
+			<a class="dataset-link" href="http://content.digital.nhs.uk/article/2021/Website-Search?productid=24154&q=hip+surgery+data&sort=Relevance&size=10&page=1&area=both#top" target="_blank">
+				Provisional Quarterly Patient Reported Outcome Measures (PROMs) in England
+				<svg class="icon nhs-icon-database">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-database"></use>
+				</svg>
+			</a>
+
+			<a class="dataset-link" href="https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=0ahUKEwivq8v_0ufSAhVDL8AKHXg7DG4QFggpMAI&url=http%3A%2F%2Fcontent.digital.nhs.uk%2Fcatalogue%2FPUB20664%2Fpres-disp-com-eng-2005-15-rep.pdf&usg=AFQjCNFprScktl5BngE9rpLJi-SpVeBMjA&sig2=Zas77ULnuqnJFA9b1JjVIg" target="_blank">
+				Prescriptions Dispensed in the Community, Statistics for England
+				<svg class="icon nhs-icon-database">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-database"></use>
+				</svg>
+			</a>
+
+			<a class="dataset-link" href="http://content.digital.nhs.uk/article/2021/Website-Search?productid=24154&q=hip+surgery+data&sort=Relevance&size=10&page=1&area=both#top" target="_blank">
+				Provisional Quarterly Patient Reported Outcome Measures (PROMs) in England
+				<svg class="icon nhs-icon-database">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-database"></use>
+				</svg>
+			</a>
+			
+		</div>
+
+		<div class="nhs-col-3">
+
+			<h3 class="widget-title">Other CCG Case Studies</h3>
+
+			<a class="other-ccg-story" ng-click="project.open_case_study( 'NHS Barking And Dagenham CCG' )">
+				NHS Barking And Dagenham CCG
+				<svg class="icon nhs-icon-keyboard_arrow_right">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-keyboard_arrow_right"></use>
+				</svg>
+			</a>
+
+			<a class="other-ccg-story" ng-click="project.open_case_study( 'NHS South Warwickshire CCG' )">
+				NHS South Warwickshire CCG
+				<svg class="icon nhs-icon-keyboard_arrow_right">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-keyboard_arrow_right"></use>
+				</svg>
+			</a>
+
+			<a class="other-ccg-story" ng-click="project.open_case_study( 'NHS West Hampshire CCG' )">
+				NHS West Hampshire CCG
+				<svg class="icon nhs-icon-keyboard_arrow_right">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-keyboard_arrow_right"></use>
+				</svg>
+			</a>
+
+			<a class="other-ccg-story" ng-click="project.open_case_study( 'NHS West Leicestershire CCG' )">
+				NHS West Leicestershire CCG
+				<svg class="icon nhs-icon-keyboard_arrow_right">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-keyboard_arrow_right"></use>
+				</svg>
+			</a>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+<div class="case-study" ng-if="project.case_study_open">
+
+	<div class="overlay" ng-click="project.case_study_open = false"></div>
+
+	<div class="inner">
+
+		<button class="close" ng-click="project.case_study_open = false">
+			<svg class="icon nhs-icon-close">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-close"></use>
+			</svg>
+		</button>
+
+		<h2 ng-bind="project.case_study_title"></h2>
+		
+		<div class="nhs-row">
+
+			<div class="nhs-col-2">
+
+				<p>In Barking and Dagenham a total of 411 hip replacement procedures were carried out between April 16 and March 17 at a cost of over £2.4 million. This equates to a cost of over £5800 per operation. According to data provided by B&D CCG, in 2015/16 compared to the similar areas, B&D had a significantly higher procedure rate for hip replacement. Figure 1 demonstrates the directly standardised rates (DSR) for hip surgery per 100,000 of the population in Greater London area.  B&D’s DSR for hip surgery was 71.92 - significantly higher than the mean Great London DSR for hip surgery of 65.22.</p><p>Nationally the average length of hospital stay for hip replacement is 10.6 days; for the top 25% performing CCGs in England this ranges from 4.4 – 9 days. B&D’s figure between April 16 and March 17 was higher than the national average at 13.9 days and lies in the bottom 25% performing CCGs. The readmission rate for hip replacements in B&D during the same period was 10.1%, which again puts B&D in the bottom 25% of CCGs; the highest 25% CCG performers averaged between 2.0-4.5% (NHS Digital).</p><p>Barking & Dagenham identified that key areas where improvements in procedures can be achieved at minimal cost include; consistent communication with patients, patients admitted on day of surgery, minimising the number of cancelled procedures, mobilising patients within 12-18 hours after surgery and using an agreed criteria-based process for discharge.  In addition primary care pathways and protocols for OA were developed to ensure that all treatment options have been tried before referral to a surgeon is made, to reduce the number of inappropriate referrals and to ensure equity of treatment. Analysis of HES data in 2014 identified higher procedure rates in regions where there were a greater number of older people, despite the data being age-standardized. The researchers hypothesised that regions with a high proportion of older people deliberately increase provision of THR to meet the presumed high need, even if this need does not materialise.</p>
+
+				<button class="view-more">
+					More info
+				</button>
+
+			</div>
+
+			<div class="nhs-col-2">
+
+				<canvas 
+					id="line" 
+					class="chart chart-line" 
+					chart-data="project.case_study.data" 
+					chart-labels="project.case_study.labels" 
+					chart-series="project.case_study.series" 
+					chart-options="project.case_study.options"
+					chart-dataset-override="project.case_study.datasetOverride" 
+					chart-click="project.case_study.onClick">
+				</canvas>
+
+				<div class="contact-details">
+					<img ng-src="{{ main.contacts[project.random_user].image }}" alt="">
+					<h4>{{ main.contacts[project.random_user].first_name }} {{ main.contacts[project.random_user].last_name }}</h4>
+					<p ng-bind="main.contacts[project.random_user].role"></p>
+					<blockquote ng-bind=" main.contacts[project.random_user].quote"></blockquote>
+					<span class="contact-icon">
+						<svg class="icon nhs-icon-phone">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-phone"></use>
+						</svg>
+					</span>
+					<span class="contact-icon">
+						<svg class="icon nhs-icon-mail_outline">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-mail_outline"></use>
+						</svg>
+					</span>
+					<span class="contact-icon">
+						<svg class="icon nhs-icon-commenting-o">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-commenting-o"></use>
+						</svg>
+					</span>
+					<span class="contact-icon">
+						<svg class="icon nhs-icon-skype">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-skype"></use>
+						</svg>
+					</span>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="ask-question ng-scope">
+
+	<div class="wrap">
+
+		<div class="nhs-row">
+
+			<div class="nhs-col-1">
+
+				<h4 class="widget-title">Current and projected resources available</h4>
+
+				<canvas 
+					id="barchart3" 
+					class="chart chart-bar" 
+					chart-series="project.availability.series" 
+					chart-data="project.availability.data" 
+					chart-labels="project.availability.labels" 
+					chart-options="project.availability.options">
+				</canvas>
+				
+			</div>
+
+		</div>
+
+	</div>
+
+</div>

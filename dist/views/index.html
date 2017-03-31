@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<base href="/">
+		<title data-ng-bind="title">NHS Prototype</title>
+		<meta name="fragment" content="!">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="/assets/img/favicons/manifest.json">
+		<link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
+		<meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+		<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/styles.min.css">
+
+	</head>
+
+	<body data-ng-class="classes">
+
+		<a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+		<div data-ui-view="layout" id="app-container">
+
+			<header class="site-header">
+
+				<a class="site-title" href="#"><img src="/assets/img/branding/nhs-logo.svg" alt="NHS"></a>
+
+				<button class="toggle-menu" data-ng-click="main.toggle_menu()">
+					<svg class="icon icon-menu" data-ng-hide="main.menu_open"><use xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-menu"/></svg>
+					<svg class="icon icon-close" data-ng-show="main.menu_open"><use xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-close"/></svg>
+				</button>
+
+				<nav class="main-nav" data-ng-show="main.menu_open">
+
+					<ul>
+						<li><a href="/understand" angular-ripple="">Understand</a></li>
+						<li><a href="/project" angular-ripple="">Project</a></li>
+						<li><a href="/collate" angular-ripple="">Collate</a></li>
+						<li><a href="/decide" angular-ripple="">Decide</a></li>
+						<li><a href="/dashboard" angular-ripple="">Dashboard</a></li>
+					</ul>
+
+				</nav>
+
+			</header>
+
+			<div data-ui-view="content"></div>
+
+			<button class="chat-toggle" data-ng-click="main.toggle_chat()">
+				<svg class="icon nhs-icon-commenting-o" data-ng-if="main.chat_open">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-close"/>
+				</svg>
+				<svg class="icon nhs-icon-commenting-o" data-ng-if="! main.chat_open">
+					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-commenting-o"/>
+				</svg>
+				Chat to an expert now
+			</button>
+
+			<div class="chat" data-ng-show="main.chat_open">
+
+				<div class="notice" data-ng-if="main.message_added" data-ng-bind="main.message_added">
+
+				</div>
+
+				<ul class="user-list" data-ng-if="main.user_search.length > 2">
+					<li data-ng-repeat="item in main.contacts | filter: main.user_search">
+						<a>
+							<div class="user-profile">
+								<svg class="icon nhs-icon-minus">
+									<use xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-person"/>
+								</svg>
+							</div>
+							{{ item.first_name }} {{ item.last_name }}
+							<span data-ng-bind="item.email"></span>
+						</a>
+					</li>
+				</ul>
+
+				<ul class="messages">
+					<li data-ng-repeat="item in main.message_list track by $index">
+						<div class="message-header">
+							<img alt="" data-ng-src="{{ item.image }}">
+							<span class="author" data-ng-bind="item.first_name + ' ' + item.last_name"></span>
+							<span class="role" data-ng-bind="item.role"></span>
+						</div>
+						<span class="message" data-ng-bind-html="'<span>' + item.messages[0].date + '</span>' + item.messages[0].message"></span>
+					</li>
+				</ul>
+
+			</div>
+
+			<site-loader></site-loader>
+
+			<footer class="site-footer" data-ng-if="!loading">
+
+				<div class="wrap">
+
+					<ul>
+						<li><a href="#">Help</a></li>
+						<li><a href="#">Accessibility</a></li>
+						<li><a href="#">Privacy</a></li>
+						<li><a href="#">Terms</a></li>
+					</ul>
+
+					<p>&copy; 2017 NHS Digital</p>
+
+				</div>
+
+			</footer>
+
+		</div>
+
+		<script src="/assets/js/bundle.min.js"></script>
+		<script src="/assets/js/app.min.js"></script>
+		<script>angular.bootstrap( document.documentElement, ['nhs'] );</script>
+
+	</body>
+
+</html>

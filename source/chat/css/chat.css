@@ -1,0 +1,168 @@
+.chat-open {
+    padding-right: 320px;
+}
+
+.chat-open-add,
+.chat-open-remove {
+	transition: all .4s;
+}
+
+.chat {
+    position: fixed;
+    right: 0;
+    width: 320px;
+    background: #fff;
+    box-shadow: 0 0 10px #aaa;
+    height: calc(100% - 80px);
+    top: 80px;
+    padding: 20px;  
+    z-index: 9;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.chat.ng-hide-add,
+.chat.ng-hide-remove {
+    transition: all .4s;
+}
+
+.chat.ng-hide-add,
+.chat.ng-hide-remove.ng-hide-remove-active {
+    right: 0;
+}
+
+.chat.ng-hide-remove,
+.chat.ng-hide-add.ng-hide-add-active {
+    right: -320px;
+}
+
+.chat-toggle {
+    position: fixed;
+    bottom: 0;
+    right: 40px;
+    z-index: 100000;
+    font-family: Halis;
+    text-transform: uppercase;
+    font-size: 12px;
+    box-shadow: 0 0 10px #555;
+    padding-left: 60px;
+}
+
+.chat-toggle:focus {
+    outline: none;
+}
+
+.chat-toggle svg {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    margin-top: -12px;
+}
+
+.chat-toggle svg use {
+    fill: #fff;
+}
+
+.messages li {
+    position: relative;
+    margin: 0 0 20px 0;
+}
+
+.messages li img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+.chat .author {
+	display: block;
+    font-family: Halis;
+    text-transform: uppercase;
+    line-height: 22px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.chat .message {
+	display: block;
+    padding: 14px 20px;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(27,27,27,0.1);
+}
+
+.message-header {
+    position: relative;
+    height: 70px;
+    padding-left: 80px;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 13px 20px 13px 80px;
+    box-shadow: inset 0 0 10px rgba(27,27,27,0.1);
+}
+
+.message span {
+    display: block;
+    font-weight: 700;
+    color: #999;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+span.role {
+    font-weight: 700;
+    color: #999;
+    font-size: 12px;
+    line-height: 20px;
+    display: block;
+    line-height: 22px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 960px) {
+
+    .chat-open {
+        padding-right: 0;
+    }
+
+    .chat {
+        position: fixed;
+        right: 0;
+        width: 320px;
+        background: #fff;
+        box-shadow: 0 0 10px #aaa;
+        height: 100%;
+        top: 0;
+        padding: 10px;  
+        z-index: 9;
+        overflow-y: scroll;
+        padding-top: 70px;
+    }
+
+    .chat-toggle {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+        font-family: Halis;
+        text-transform: uppercase;
+        font-size: 0;
+        padding-right: 0;
+        box-shadow: 0 0 10px #555;
+        padding-left: 60px;
+    }
+
+    .messages li {
+        position: relative;
+        margin: 0 0 10px 0;
+    }
+
+}

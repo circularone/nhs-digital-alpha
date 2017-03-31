@@ -1,0 +1,192 @@
+.wrap {
+	max-width: 1280px;
+	padding: 0 40px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.nhs-row {
+	position: relative;
+	margin: 0 0 40px 0;
+}
+
+.nhs-row:last-child {
+	margin-bottom: 0;
+}
+
+[class^="nhs-col-"] {
+	float: left;
+	position: relative;
+	margin: 0 40px 0 0;
+}
+
+[class^="nhs-col-"]:last-child {
+	margin-right: 0;
+}
+
+[class^="nhs-col-"] > :last-child {
+	margin-bottom: 0;
+}
+
+.nhs-col-1 {
+	width: 100%;
+}
+
+.nhs-col-2 {
+	width: calc(50% - 20px);
+}
+
+.nhs-col-3 {
+	width: calc(33.3333333333% - 26.66666666666667px);
+}
+
+.nhs-col-4 {
+	width: calc(25% - 30px);
+}
+
+.nhs-col-2-3 {
+	width: calc(66.6666666666% - 13.33333333333334px);
+}
+
+.nhs-col-3-4 {
+	width: calc(75% - 20px);
+}
+
+.nhs-content-left {
+	width: calc(100% - 340px);
+	float: left;
+	position: relative;
+	padding-bottom: 40px;
+	padding-top: 40px;
+}
+
+.nhs-content-left > :last-child {
+	margin-bottom: 0;
+}
+
+.nhs-content-right {
+	width: calc(100% - 340px);
+	float: right;
+	position: relative;
+	padding-bottom: 40px;
+	padding-top: 40px;
+}
+
+.nhs-left-sidebar,
+.nhs-right-sidebar {
+	width: 300px;
+	padding: 0;
+	margin: 0 0 40px 0;
+	position: relative;
+}
+
+.nhs-left-sidebar {
+	float: left;
+}
+
+.nhs-right-sidebar {
+	float: right;
+}
+
+.nhs-left-sidebar + .nhs-right-content {
+	margin-left: 40px;
+}
+
+.boxed {
+	background: #fff;border: 1px solid #f0f0f0;
+	border-bottom: #e0e0e0;
+	padding: 20px;
+	border-radius: 2px;
+/*    box-shadow: 0 0 10px rgba(27,27,27,0.05);*/
+}
+
+.center {
+	text-align: center;
+}
+
+[class^="nhs-col-"] img {
+	max-width: 100%;
+	height: auto;
+}
+
+@media only screen and (max-width:960px) {
+
+	
+
+	.wrap {
+		padding: 0 20px;
+	}
+
+
+	.desktop-only {
+		position: absolute;
+		left: -10000px;
+	}
+
+
+}
+
+
+@media only screen and (max-width: 840px) {
+
+	.nhs-content-left,
+	.nhs-content-right {
+		width: 100%;
+		padding-bottom: 12px;
+	}
+
+	.nhs-left-sidebar,
+	.nhs-right-sidebar {
+		width: 100%;
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+
+	.wrap {
+		padding: 0 10px;
+	}
+
+	.nhs-row {
+		margin-bottom: 40px;
+	}
+
+	[class^="nhs-col-"] {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 40px;
+	}
+
+	[class^="nhs-col-"]:last-child {
+		margin-bottom: 0;
+	}
+
+	.tablet-only {
+		position: absolute;
+		left: -10000px;
+	}
+
+}
+
+
+.nhs-row > .left-icon {
+    padding-left: 70px;
+}
+
+.nhs-col-icon.left {
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+
+.vert-padding {
+	padding-top: 50px;
+	padding-bottom: 60px;
+}
+
+
+.highlight-boxes {
+    background: #fff;
+    padding: 50px 0 60px 0;
+}

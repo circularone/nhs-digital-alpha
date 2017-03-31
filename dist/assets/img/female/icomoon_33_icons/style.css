@@ -1,0 +1,52 @@
+.nhs-icon- {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.nhs-icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.nhs-icon-skype {
+  width: 0.857421875em;
+}
+
+.nhs-icon-database {
+  width: 0.857421875em;
+}
+
+.nhs-icon-floppy-o {
+  width: 0.857421875em;
+}
+
+.nhs-icon-share-square-o {
+  width: 0.931640625em;
+}
+
+.nhs-icon-alert {
+  width: 0.357421875em;
+}
+
+.nhs-icon-minus {
+  width: 0.7861328125em;
+}
+
+.nhs-icon-plus {
+  width: 0.7861328125em;
+}
+
+.nhs-icon-search {
+  width: 0.9287109375em;
+}
+
+.nhs-icon-download {
+  width: 0.9287109375em;
+}

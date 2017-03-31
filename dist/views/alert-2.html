@@ -1,0 +1,104 @@
+<div class="standard-header">
+
+	<div class="wrap">
+
+		<h1 class="alert-title">
+			<svg class="alert-icon">
+				<use xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-notifications_none"/>
+			</svg>
+			Public health alert: Flu cases expected to rise in Darlington by 30 - 50%
+		</h1>
+		<p>May 31st 2017</p>
+
+	</div>
+
+</div>
+
+<div class="wrap">
+
+	<main class="nhs-content-left">
+
+		<p class="alert-intro">Etiam nisi felis, sollicitudin iaculis cursus eu, imperdiet nec arcu. Curabitur risus dolor, fermentum non porta sit amet, fermentum ut nulla.</p>
+
+		<p>Etiam nisi felis, sollicitudin iaculis cursus eu, imperdiet nec arcu. Curabitur risus dolor, fermentum non porta sit amet, fermentum ut nulla. Fusce aliquam, nunc eget condimentum aliquam, orci enim pretium velit, quis lobortis ex eros in eros. Aenean venenatis, nulla vel semper convallis, ipsum tortor viverra sapien, vel cursus turpis nulla ut enim. Nulla facilisi.</p>
+
+	</main>
+
+	<aside class="nhs-right-sidebar">
+
+		<div class="alert-actions">
+			<button href="/scenario">
+				Create a proposal
+				<svg class="icon nhs-icon-arrow_forward">
+					<use xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-arrow_forward"/>
+				</svg>
+			</button>
+		    <button data-ng-click="alert.reminder()">
+		    	Remind me later
+		    	<svg class="icon nhs-icon-access_alarms">
+					<use xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-access_alarms"/>
+				</svg>
+		    </button>
+		    <button data-ng-click="alert.close()">
+		    	Clear
+		    	<svg class="icon nhs-icon-close">
+					<use xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-close"/>
+				</svg>
+		    </button>
+		</div>
+		
+	</aside>
+
+</div>
+
+<div class="alert-detail vert-padding">
+
+	<div class="wrap">
+
+		<div class="nhs-row">
+
+			<div class="nhs-col-2-3">
+
+				<h3 class="widget-title">Performance report</h3>
+
+				<canvas id="line" class="chart chart-line" chart-data="alert.graph.data" chart-labels="alert.graph.labels" chart-series="alert.graph.series" chart-options="alert.graph.options" chart-dataset-override="alert.graph.datasetOverride" chart-click="alert.graph.onClick">
+				</canvas>
+
+			</div>
+
+			<div class="nhs-col-3">
+
+				<ul class="icon-list top-spacer">
+					<li>
+						<svg class="icon nhs-icon-keyboard_arrow_right">
+							<use xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-keyboard_arrow_right"/>
+						</svg>
+						Elementum justo ac rhoncus eros
+					</li>
+					<li>
+						<svg class="icon nhs-icon-keyboard_arrow_right">
+							<use xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-keyboard_arrow_right"/>
+						</svg>
+						Duis sed felis vestibulum
+					</li>
+					<li>
+						<svg class="icon nhs-icon-keyboard_arrow_right">
+							<use xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-keyboard_arrow_right"/>
+						</svg>
+						Etiam fringilla molestie hendrerit
+					</li>
+					<li>
+						<svg class="icon nhs-icon-keyboard_arrow_right">
+							<use xlink:href="/assets/img/icons/symbol-defs.svg#nhs-icon-keyboard_arrow_right"/>
+						</svg>
+						Suspendisse purus ante
+					</li>
+				</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>

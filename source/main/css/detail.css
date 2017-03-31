@@ -1,0 +1,27 @@
+.main-detail {
+	background: #f7f7f7;
+}
+
+.detail-extended {
+	padding-top: 50px!important;
+	padding-bottom: 60px!important;
+}
+
+.detail-extended canvas#bar {
+	margin-top: 10px;
+}
+  
+a.back-to-projection {
+	color :#fff;
+}
+
+a.back-to-projection svg {
+	width: 20px;
+	height: 20px;
+	position :relative;
+	top: 4px;
+}
+
+a.back-to-projection use {
+	fill: #fff;
+}
