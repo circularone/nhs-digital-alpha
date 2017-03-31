@@ -16,7 +16,7 @@ We have preconfigured the project with a simple development web server. The simp
 this server is:
 
 ```
-npm start
+npm install
 ```
 
 Now browse to the app at [localhost:8000](http://localhost:8000).
