@@ -2,7 +2,7 @@
 
 // Dependencies
 
-var gulp 		= require('gulp'),
+var	gulp 		= require('gulp'),
 	concat 		= require('gulp-concat'),
 	uglify 		= require('gulp-uglify'),
 	jshint 		= require('gulp-jshint'),
@@ -24,9 +24,6 @@ var gulp 		= require('gulp'),
 // Paths
 
 var paths = {
-	sass: [
-		'source/css/**/*.scss'
-	],
 	html: [
 		'source/**/*.html'
 	],
