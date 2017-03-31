@@ -51,7 +51,7 @@
 			}
 		});
 
-		// Catch all non dewfined routes
+		// Catch all non defined routes
 
 		$urlRouterProvider.otherwise( 'main.home' );
 
@@ -63,27 +63,27 @@
 
 		.state( 'main', main_config() )
 
-		// UNDERSTAND 
+		// Understand 
 
 		.state( 'main.understand', understand_config() )
 
-		// PROJECT 
+		// Project 
 
 		.state( 'main.project', project_config() )
 
-		// DECIDE
+		// Decide
 
 		.state( 'main.decide', decide_config() )
 
-		// COLLATE
+		// Collate
 
 		.state( 'main.collate', collate_config() )
 
-		// DECIDE
+		// Dashboard
 
 		.state( 'main.dashboard', dashboard_config() )
 
-		// HOME
+		// Home (redundant - transitions to understand)
 
 		.state( 'main.home', home_config() );
 

@@ -12,6 +12,8 @@
 
 		var home = this;
 
+		// This state now unecessary - go to start of journey
+
 		$state.go( 'main.understand' );
 
 		$scope.$on( '$destroy', function() {
