@@ -4,7 +4,7 @@ Prototype as part of a service design proposal for NHS England by [Nile](https:/
 
 This is purely for demonstration of ideas only and not to be used in production.
 
-[Live demo|(https://nhs.spideronline.co.uk/)
+[Live demo](https://nhs.spideronline.co.uk/)
 
 ## Requirements
 
